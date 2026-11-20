@@ -33,6 +33,6 @@ export class UsersRepository {
         "INSERT INTO users (title, email, password) VALUES ($title, $email, $password) RETURN id, title, email"
       )
 
-      .get({ $titleL: title })
+      .get({ $titleL: title, $email: email, $password: password });
   }
 }
